@@ -1,2 +1,2 @@
-# RaspberryPI_VPN_AccessPoint
-## Sharing Tunnel Bear VPN as Access Point using Raspberry PI
+# RaspberryPI VPN AccessPoint
+### Sharing Tunnel Bear VPN as WiFi Access Point using Raspberry PI
