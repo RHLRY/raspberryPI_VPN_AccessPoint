@@ -14,6 +14,8 @@ https://www.instructables.com/id/Raspberry-Pi-VPN-Gateway/
     
     cd /etc/openvpn
     sudo nano auth.txt
+    sudo chmod 600 /etc/openvpn/auth.txt
+
 ## Content of auth.txt
     raulrahulroy@gmail.com
     rahulroy@tunnelbear
