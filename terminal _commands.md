@@ -3,8 +3,11 @@ https://www.instructables.com/id/Raspberry-Pi-VPN-Gateway/
 ### Setting up OpenVPN
     mkdir VPNhotspot
     cd VPNhotspot
-    unzip openvpn.zip
     wget https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip
+    unzip openvpn.zip
+    sudo apt-get install openvpn
+    sudo systemctl enable openvpn
+
 
 ## Move these settings files to /etc/openvpn/
     sudo cp CACertificate.crt PrivateKey.key UserCertificate.crt us.conf /etc/openvpn/
