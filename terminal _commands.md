@@ -75,12 +75,12 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     sudo netfilter-persistent save
     sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
     sudo nano /etc/dnsmasq.conf
-    interface=wlan0 # Listening interface
-    dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
-                    # Pool of IP addresses served via DHCP
-    domain=wlan     # Local wireless DNS domain
-    address=/gw.wlan/192.168.4.1
-                    # Alias for this router
+            interface=wlan0 # Listening interface
+            dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
+                            # Pool of IP addresses served via DHCP
+            domain=wlan     # Local wireless DNS domain
+            address=/gw.wlan/192.168.4.1
+                            # Alias for this router
     sudo rfkill unblock wlan
     sudo nano /etc/hostapd/hostapd.conf
             country_code=IN
