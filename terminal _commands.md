@@ -60,6 +60,7 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
     
 ## Setting up hotspot
+    sudo apt install hostapd
     sudo systemctl unmask hostapd
     sudo systemctl enable hostapd
     sudo apt install dnsmasq
