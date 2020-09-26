@@ -11,7 +11,7 @@ https://www.raspberrypi.org/documentation/configuration/wireless/access-point-ro
 
 
 ## Move these settings files to /etc/openvpn/
-    sudo cp CACertificate.crt PrivateKey.key UserCertificate.crt us.conf /etc/openvpn/
+    sudo cp CACertificate.crt PrivateKey.key UserCertificate.crt /etc/openvpn/
     
     cd /etc/openvpn
     sudo nano auth.txt
@@ -23,6 +23,10 @@ https://www.raspberrypi.org/documentation/configuration/wireless/access-point-ro
 
 ## rename TunnelBear United States.ovpn to us.conf
 Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can create problem)
+
+## make conf file
+    mkdir us.conf
+    sudo nano us.conf
     
 ## content of us.conf (Make sure to provide absolute path)
     client
