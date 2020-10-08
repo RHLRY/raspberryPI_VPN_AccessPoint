@@ -14,7 +14,11 @@ https://www.raspberrypi.org/documentation/configuration/wireless/access-point-ro
 Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can create problem)
     
     cp ~/VPNhotspot/openvpn/'TunnelBear United States.ovpn' ~/VPNhotspot/openvpn/us.conf
-
+    
+## Move these settings files to /etc/openvpn/
+    sudo cp ~/VPNhotspot/openvpn/CACertificate.crt ~/VPNhotspot/openvpn/PrivateKey.key ~/VPNhotspot/openvpn/UserCertificate.crt ~/VPNhotspot/openvpn/us.conf /etc/openvpn/
+    cd /etc/openvpn
+    
 ## edit conf file
     sudo nano us.conf
     
@@ -39,11 +43,9 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     remote us.lazerpenguin.com 443
     cipher AES-256-CBC
     auth SHA256
-    keysize 256
+    keysize 256    
     
-## Move these settings files to /etc/openvpn/
-    sudo cp ~/VPNhotspot/openvpn/CACertificate.crt ~/VPNhotspot/openvpn/PrivateKey.key ~/VPNhotspot/openvpn/UserCertificate.crt ~/VPNhotspot/openvpn/us.conf /etc/openvpn/
-    cd /etc/openvpn
+## Make authentication file
     sudo nano auth.txt
     sudo chmod 600 /etc/openvpn/auth.txt
 
