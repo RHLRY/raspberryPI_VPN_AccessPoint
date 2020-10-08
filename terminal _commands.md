@@ -46,7 +46,7 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     keysize 256    
     
 ## Make authentication file
-    sudo nano auth.txt
+    sudo nano /etc/openvpn/auth.txt
     sudo chmod 600 /etc/openvpn/auth.txt
 
 ## Content of auth.txt
