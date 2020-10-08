@@ -15,7 +15,7 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     
     cp ~/VPNhotspot/openvpn/'TunnelBear United States.ovpn' ~/VPNhotspot/openvpn/us.conf
 
-## make conf file (optional)
+## edit conf file
     sudo nano us.conf
     
 ## content of us.conf (Make sure to provide absolute path)
