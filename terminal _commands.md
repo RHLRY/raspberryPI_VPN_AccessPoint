@@ -42,7 +42,7 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     keysize 256
     
 ## Move these settings files to /etc/openvpn/
-    sudo cp ~/openvpn/CACertificate.crt ~/openvpn/PrivateKey.key ~/openvpn/UserCertificate.crt ~/openvpn/us.conf /etc/openvpn/
+    sudo cp ~/VPNhotspot/openvpn/CACertificate.crt ~/VPNhotspot/openvpn/PrivateKey.key ~/VPNhotspot/openvpn/UserCertificate.crt ~/VPNhotspot/openvpn/us.conf /etc/openvpn/
     cd /etc/openvpn
     sudo nano auth.txt
     sudo chmod 600 /etc/openvpn/auth.txt
