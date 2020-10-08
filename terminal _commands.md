@@ -95,7 +95,7 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     sudo nano /etc/hostapd/hostapd.conf
             country_code=IN
             interface=wlan0
-            ssid=ROY-VPNsecured
+            ssid=ROYᵛᵖⁿˢᵉᶜᵘʳᵉᵈ
             hw_mode=g
             channel=7
             macaddr_acl=0
