@@ -10,21 +10,11 @@ https://www.raspberrypi.org/documentation/configuration/wireless/access-point-ro
     sudo systemctl enable openvpn
 
 
-## Move these settings files to /etc/openvpn/
-    sudo cp openvpn/CACertificate.crt openvpn/PrivateKey.key openvpn/UserCertificate.crt /etc/openvpn/
-    
-    cd /etc/openvpn
-    sudo nano auth.txt
-    sudo chmod 600 /etc/openvpn/auth.txt
-
-## Content of auth.txt
-    raulrahulroy@gmail.com
-    rahulroy@tunnelbear
-
 ## rename TunnelBear United States.ovpn to us.conf
 Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can create problem)
+cp 'TunnelBear United States.ovpn' us.conf
 
-## make conf file
+## make conf file (optional)
     sudo nano us.conf
     
 ## content of us.conf (Make sure to provide absolute path)
@@ -49,8 +39,21 @@ Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can
     cipher AES-256-CBC
     auth SHA256
     keysize 256
+    
+## Move these settings files to /etc/openvpn/
+    sudo cp openvpn/CACertificate.crt openvpn/PrivateKey.key openvpn/UserCertificate.crt us.conf /etc/openvpn/
+    cd /etc/openvpn
+    sudo nano auth.txt
+    sudo chmod 600 /etc/openvpn/auth.txt
+
+## Content of auth.txt
+    raulrahulroy@gmail.com
+    rahulroy@tunnelbear
+    
 ## Reboot 
     sudo reboot now
+    
+    
 ## tun0 -> $ifconfig -> output
     tun0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1500
         inet 172.18.13.94  netmask 255.255.255.255  destination 172.18.13.93
