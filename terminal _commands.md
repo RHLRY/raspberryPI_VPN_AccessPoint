@@ -12,6 +12,7 @@ https://www.raspberrypi.org/documentation/configuration/wireless/access-point-ro
 
 ## rename TunnelBear United States.ovpn to us.conf
 Any .ovpn can be used but remember to change to .conf. (remove spaces, as it can create problem)
+    
     cp 'TunnelBear United States.ovpn' us.conf
 
 ## make conf file (optional)
